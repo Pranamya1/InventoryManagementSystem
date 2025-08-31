@@ -1,0 +1,290 @@
+/* Inter font import */
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* body */
+body {
+    margin: 0%;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+    color: #000;
+    font-weight: 300;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    display: flex;
+    cursor: default;
+}
+
+/* main container */
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    max-height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+/* nav bars */
+/* sidebar container */
+.sidebar {
+    width: 20.85%;
+    height: 98.7vh;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+/* collapse button container */
+.collaps_btn {
+    height: 7%;
+    width: 100%;
+    padding: 5px;
+}
+
+/* sidebar btns container */
+.sidebar_btns-cont {
+    height: 45.2%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+/* sidebar btns */
+.sidebar_btn {
+    height: 15%;
+    width: 85%;
+    border-radius: 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    text-decoration: none;
+    word-spacing: 0.3%;
+}
+
+/* svg of navbar */
+.sidebar_btn svg {
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+/* information chart sidebar */
+.sidebar-info_chart-cont {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* information chart */
+.sidebar-info_chart {
+    height: 90%;
+    width: 85%;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+/* information holders */
+.sidebar-info_holder {
+    height: 13.8%;
+    width: 85%;
+    background-color: #000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* information title */
+.sidebar-info_title {
+    height: 100%;
+    width: 70%;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding-left: 4%;
+    font-weight: 350;
+}
+
+/* information number */
+.sidebar-info_num {
+    height: 100%;
+    width: 30%;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 350;
+}
+
+/* content side: everything will be here */
+.content-side {
+    width: 79.15%;
+    min-height: 100vh;
+    max-height: auto;
+    margin-left: 21%;
+    padding-left: 5px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+}
+
+/* topbar */
+.topbar {
+    width: 100%;
+    height: 6.3%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* page title */
+.page-title {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.page-title p {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+/* topbar extra space */
+.topbar-extra-space {
+    height: 100%;
+    width: 60%;
+}
+
+/* profile, notification, dark/bright mode container */
+.topbar-profil-cont {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.topbar-icons {
+    margin-left: 10px;
+    color: #000;
+}
+
+/* notification panel */
+/* transparant dark overlay */
+.notification-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* transparant dark overlay active */
+.notification-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* notification panel */
+.notification-panel {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    width: 350px;
+    height: calc(100vh - 10px);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+}
+
+.notification-panel.open {
+    transform: translateX(0);
+}
+
+/* header */
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* notification heading */
+.panel-header p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 350;
+}
+
+/* close btn */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #000;
+}
+
+/* notification content */
+.panel-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.notification-item {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-title {
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.notification-text {
+    font-size: 0.9em;
+    color: #666;
+}
